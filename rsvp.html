@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from www.madebydesignesia.com/themes/ /rsvp.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Oct 2022 16:15:06 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A Contact Form Using Phpmailer - reusable form</title>
+    <link rel="stylesheet" href="../../../cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="rsvp/form.css">
+    <script src="rsvp/form.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>
+                Contact Us
+            </h1>
+            <form name="rsvp" id='rsvp_form' class="form-underline" method="post" action="https://www.madebydesignesia.com/themes/ /rsvp.php">
+                <div class="col-md-3">
+                    <input type='text' name='Name' id='name' class="form-control" placeholder="Your Name" required maxlength="50">
+                </div>
+                <div class="col-md-3">
+                    <input type='text' name='Email' id='email' class="form-control" placeholder="Your Email" required maxlength="50">
+                </div>
+                <div class="col-md-3">
+                    <select id="guest" name="Guest" size="1" class="form-control">
+                        <option value="" disabled selected>Guests</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select id="attend" name="Attend" size="1" class="form-control">
+                        <option value="" disabled selected>Are you attending?</option>
+                        <option>yes</option>
+                        <option>no</option>
+                    </select>
+                </div>
+                <div class="col-md-12 text-center">
+                    <div class="spacer-single"></div>
+                    <input type='submit' id='submit' value='Submit' class="btn btn-custom">
+                    <div id='mail_success' class='success'>Your message has been sent successfully.</div>
+                    <div id='mail_fail' class='error'>Sorry, error occured this time sending your message.</div>
+                </div>
+            </form>
+            <div id="success_message" class="text-center">
+                <h3>Submitted the form successfully!</h3>
+                <p> We will get back to you soon. </p>
+            </div>
+            <div id="error_message" class="text-center">
+                <h3>Error</h3> Sorry there was an error sending your form.
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<!-- Mirrored from www.madebydesignesia.com/themes/ /rsvp.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Oct 2022 16:15:07 GMT -->
+</html>
