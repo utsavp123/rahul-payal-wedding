@@ -458,9 +458,9 @@
 	/*!
 	 * FitVids 1.0
 	 *
-	 * Copyright 2011, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
-	 * Credit to Thierry Koblentz - http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
-	 * Released under the WTFPL license - http://sam.zoy.org/wtfpl/
+	 * Copyright 2011, Chris Coyier - https://css-tricks.com + Dave Rupert - https://daverupert.com
+	 * Credit to Thierry Koblentz - https://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
+	 * Released under the WTFPL license - https://sam.zoy.org/wtfpl/
 	 *
 	 * Date: Thu Sept 01 18:00:00 2011 -0500
 	 */
@@ -521,8 +521,8 @@
 	 * jquery.scrollto.js 0.0.1 - https://github.com/yckart/jquery.scrollto.js
 	 * Scroll smooth to any element in your DOM.
 	 *
-	 * Copyright (c) 2012 Yannick Albert (http://yckart.com)
-	 * Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php).
+	 * Copyright (c) 2012 Yannick Albert (https://yckart.com)
+	 * Licensed under the MIT license (https://www.opensource.org/licenses/mit-license.php).
 	 * 2013/02/17
 	 **/
 	$.scrollTo = $.fn.scrollTo = function(x, y, options) {

@@ -28,6 +28,205 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/animsition.min.css" type="text/css">
     <link rel="stylesheet" href="rsvp/form.css">
+    <style>
+        html {
+            overflow: hidden;
+        }
+
+        #door5 {
+            overflow: unset;
+            z-index: 2;
+        }
+
+        #door5.active .left {
+            transform-origin: left;
+            transform: perspective(1400px) rotateY(-125deg);
+        }
+
+        #door5.active .right {
+            transform-origin: right;
+            transform: perspective(1400px) rotateY(125deg);
+        }
+
+        .title-container {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 0 auto;
+            background-color: #fe7200;
+            background-image: url("https://www.transparenttextures.com/patterns/grid-me.png");
+            -webkit-background-clip: text;
+            font-size: 5em;
+            font-weight: bold;
+            color: transparent;
+            transition: font-size .3s ease;
+        }
+
+        .grid-container1,
+        .grid-container2,
+        .grid-container3,
+        .grid-container4 {
+            width: 100%;
+            height: 100%;
+            background-color: #191919;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .grid {
+            height: 80%;
+            max-width: 100%;
+            width: 90%;
+            background: radial-gradient(ellipse at center, rgba(236, 240, 241, 1) 0%, rgba(25, 25, 25, 1) 100%), url("https://www.transparenttextures.com/patterns/egg-shell.png");
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 4em auto;
+            border: .125em solid #ECF0F1;
+        }
+
+        .grid-item {
+            position: absolute;
+            background-color: transparent;
+            margin: auto;
+            border: 0.125em solid #181818;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            width: auto;
+            scroll-behavior: auto;
+            z-index: 11111;
+            height: 100vh;
+        }
+
+
+        .grid-item-interior {
+            height: 100%;
+            width: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0 auto;
+            background-color: #ecf0f1;
+            background-image: url("https://www.transparenttextures.com/patterns/lined-paper.png");
+
+            box-shadow: inset 0px 0px 20px 5px rgba(41, 41, 41, 0.4);
+        }
+
+        .grid-item-interior span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            margin-top: 6.5%;
+            background-color: rgba(17, 17, 17, 0.5);
+            color: #292929;
+            font-size: 1.5em;
+            border-top: .0625em solid #292929;
+            border-bottom: .0625em solid #292929;
+        }
+
+        /* .grid-item:hover,
+        .grid-item:hover .left,
+        .grid-item:hover .right,
+        .grid-item:hover .door-large,
+        .grid-item:hover .top,
+        .grid-item:hover .bottom {
+            border: .125em solid #FE7200;
+        } */
+
+        /* ==================== Door Properties =============================== */
+
+        .door {
+            width: 100%;
+            height: 100%;
+            display: block;
+            overflow: hidden;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+        .door-large {
+            height: 100%;
+            width: 100%;
+            display: block;
+            position: absolute;
+            transition: all 0.5s ease-in-out, border 0.1s ease;
+            background: #292929 url() repeat center center;
+            border: .0625em solid #181818;
+        }
+
+        .left,
+        .right {
+            height: 100%;
+            width: 50%;
+            display: inline-block;
+            position: absolute;
+            transition: all 1s ease-in-out, border 0.1s ease;
+
+        }
+
+        .right {
+            top: 0;
+            right: 0;
+            border-left: .0625em solid #181818;
+            background-image: url('/images/open/2.png');
+        }
+
+        .left {
+            top: 0;
+            left: 0;
+            border-right: .0625em solid #181818;
+            background-image: url("/images/open/1.png");
+        }
+
+        .top,
+        .bottom {
+            height: 50%;
+            width: 100%;
+            display: block;
+            position: absolute;
+            transition: all 0.5s ease-in-out, border 0.1s ease;
+            background: #292929 url('egg-shell.png') repeat center center;
+        }
+
+        .top {
+            top: 0;
+            border-bottom: .0625em solid #181818;
+        }
+
+        .bottom {
+            bottom: 0;
+            border-top: .0625em solid #181818;
+        }
+
+        .heading {
+            position: absolute;
+            z-index: 1111111;
+            color: aliceblue !important;
+            top: -168px;
+            bottom: 0;
+            margin: auto;
+            display: flex;
+            left: 0;
+            right: 0;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+        }
+    </style>
 
 
     <!-- custom background -->
@@ -38,9 +237,33 @@
 </head>
 
 <body id="homepage">
+    <div class="grid-item">
+        <div>
+            <div class="heading">
+                <h2 class=" " style="color:#fffa9a">
+                    Welcome To Wedding Ceremony.....
+                </h2>
+                <div style="display: block; color:rgb(206 192 94)">
+                    Click To Open The Door
+                </div>
+            </div>
+        </div>
+        <div class="door" id="door5">
+            <!-- <div class="grid-item-interior">
+                <span> Pivot Apart </span>
+            </div> -->
+            <div class="left"><img src="/images/open/1.png" style=" height: 100%;
+                width: 100%;" alt=""></div>
+            <div class="right"><img src="/images/open/2.png" style=" height: 100%;
+                width: 100%;" alt=""></div>
+        </div><!-- end /.door -->
+    </div>
 
-    <div id="wrapper">
+    <div id="wrapper" style="display: none;">
 
+        <audio loop="loop" autoplay="autoplay">
+            <source src="music/Feels%20Like%20a%20Wedding%20Day.mp3" type="audio/mpeg" />
+        </audio>
         <!-- header begin -->
         <header>
 
@@ -51,7 +274,7 @@
                         <!-- logo begin -->
                         <div id="logo">
                             <a href="index.html">
-                                <h2>Payal<span>&amp;</span>Rahul</h2>
+                                <h2>Rahul<span>&amp;</span>Payal</h2>
                             </a>
                         </div>
                         <!-- logo close -->
@@ -82,7 +305,7 @@
             </div>
         </header>
         <!-- header close -->
-
+        <!-- end /.grid-item -->
         <!-- content begin -->
         <div id="content" class="no-bottom no-top">
 
@@ -177,13 +400,13 @@
                                 <div class="row">
                                     <div class="spacer-single"></div>
                                     <div class="col-md-5 text-right text-center-sm relative">
-                                        <h2 class="name">Payal</h2>
+                                        <h2 class="name">Rahul</h2>
                                     </div>
                                     <div class="col-md-2 text-center">
                                         <span class="deco-big" data-scroll-speed="2">&amp;</span>
                                     </div>
                                     <div class="col-md-5 text-left text-center-sm relative">
-                                        <h2 class="name">Rahul</h2>
+                                        <h2 class="name">Payal</h2>
                                     </div>
                                 </div>
                             </div>
@@ -212,13 +435,14 @@
                     <div class="row">
 
                         <div class="col-md-5 col-md-offset-1 text-center">
-                            <img src="images/misc/1.jpg" alt="" class="img-responsive img-rounded wow fadeInLeft"
+                            <img src="images/misc/2.jpg" alt="" class="img-responsive img-rounded wow fadeInLeft"
                                 data-wow-delay=".2s" />
                             <div class="padding40">
-                                <h2>Payal</h2>
-                                <p>Singer, writter, chef. Love music, reading and cooking. "Love isn't something you
-                                    find. Love
-                                    is something that finds you."</p>
+                                <h2>Rahul</h2>
+
+                                <p>Hipster, designer, ilustrator. Love music and adventure. "There is only one happiness
+                                    in
+                                    this life, to love and be loved."</p>
                                 <!-- social icons -->
                                 <!-- <div class="social-icons-sm">
                                     <a href="#"><i class="fa fa-facebook"></i></a>
@@ -232,13 +456,14 @@
                         </div>
 
                         <div class="col-md-5 text-center">
-                            <img src="images/misc/2.jpg" alt="" class="img-responsive img-rounded wow fadeInRight"
+                            <img src="images/misc/1.jpg" alt="" class="img-responsive img-rounded wow fadeInRight"
                                 data-wow-delay=".2s" />
                             <div class="padding40">
-                                <h2>Rahul</h2>
-                                <p>Hipster, designer, ilustrator. Love music and adventure. "There is only one happiness
-                                    in
-                                    this life, to love and be loved."</p>
+                                <h2>Payal</h2>
+                                <p>Singer, writter, chef. Love music, reading and cooking. "Love isn't something you
+                                    find. Love
+                                    is something that finds you."</p>
+
                                 <!-- social icons -->
                                 <!-- <div class="social-icons-sm">
                                     <a href="#"><i class="fa fa-facebook"></i></a>
@@ -637,7 +862,7 @@
             <div class="container text-center text-light">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="hs1 wow fadeInUp">Payal<span>&amp;</span>Rahul</h2>
+                        <h2 class="hs1 wow fadeInUp">Rahul<span>&amp;</span>Payal</h2>
                     </div>
                 </div>
             </div>
@@ -645,7 +870,7 @@
             <div class="subfooter">
                 <div class="container text-center">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12" id="mydiv">
                             &copy; Copyright 2022 <br> By Parmar Family
                         </div>
                     </div>
@@ -660,12 +885,11 @@
         </div>
     </div>
 
-    <audio loop="loop" autoplay="autoplay">
-        <source src="music/Feels%20Like%20a%20Wedding%20Day.mp3" type="audio/mpeg" />
-    </audio>
+
 
     <!-- Javascript Files
     ================================================== -->
+
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.isotope.min.js"></script>
@@ -682,8 +906,37 @@
     <script src="js/animsition.min.js"></script>
     <script src="js/designesia.js"></script>
     <script src="rsvp/form.js"></script>
+    <script>
+
+        // x  = setTimeout(() => {
+        //     //   myfunc();
+        //       document.getElementById("mydiv").click();
+        // }, 5000);
+        // function myfunc(){
+        //     console.log('sdfsdf');
+
+        // }
+
+    </script>
 
 </body>
+<script>
+    window.scrollTo(0, 0);
+    $(document).ready(function () {
+        $(".grid-item").click(function () {
+
+            $(this).children('.door').toggleClass("active");
+            $('html').css('overflow', 'auto')
+            $('#wrapper').css('display', 'block')
+            //     var elem = document.documentElement
+            //    elem.requestFullscreen()
+            setTimeout(() => {
+                $(this).css('display', 'none');
+            }, 1000);
+
+        });
+    });
+</script>
 
 
 <!-- Mirrored from www.madebydesignesia.com/themes/ /index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Oct 2022 16:14:22 GMT -->
