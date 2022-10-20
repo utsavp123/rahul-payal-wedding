@@ -851,7 +851,10 @@
             x.play();
             elem.requestFullscreen()
             var item = setInterval(() => {
-                $(this).css('display', 'none');
+
+            
+                $(this).css( 'visibility', 'hidden'  );
+                $(this).css( 'height', '0vh');
                 clearInterval(item);
             }, 1000);
 
