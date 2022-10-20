@@ -620,7 +620,7 @@ header.header-mobile.header-light #menu-btn {
 /* ================================================== */
 
 section {
-	padding: 80px 0 80px 0;
+	padding: 40px 0 40px 0;
 	position: relative;
 }
 section {
@@ -646,11 +646,13 @@ section {
 
 
 /* ================================================== */
-
+p{
+	text-transform: capitalize;
+}
 footer {
 	background: #626570;
 	color: #ccc;
-	padding: 80px 0 0px 0;
+	padding: 40px 0 0px 0;
 }
 footer h3, .de_light footer h3 {
 	color: #fff;
@@ -4581,7 +4583,7 @@ strong {
 	background: rgba(157, 130, 235, .3);
 }
 section .color-overlay {
-	padding: 80px 0 80px 0;
+	padding: 40px 0 40px 0;
 }
 .color-overlay-2 {
 	background: rgba(26, 37, 48, .85);
