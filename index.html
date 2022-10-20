@@ -29,9 +29,9 @@
     <link rel="stylesheet" href="css/animsition.min.css" type="text/css">
     <link rel="stylesheet" href="rsvp/form.css">
     <style>
-        html {
+        /* html {
             overflow: hidden;
-        }
+        } */
 
         #door5 {
             overflow: unset;
@@ -92,12 +92,12 @@
         }
 
         .grid-item {
-            position: absolute;
+            /* position: absolute; */
             background-color: transparent;
             margin: auto;
             border: 0.125em solid #181818;
             text-align: center;
-            position: absolute;
+            position: sticky;
             top: 0;
             right: 0;
             left: 0;
@@ -259,9 +259,9 @@
         </div><!-- end /.door -->
     </div>
 
-    <div id="wrapper" style="display: none;">
+    <div id="wrapper" style="display: block;">
 
-        <audio loop="loop" autoplay="autoplay">
+        <audio loop="loop" id="myAudio">
             <source src="music/Feels%20Like%20a%20Wedding%20Day.mp3" type="audio/mpeg" />
         </audio>
         <!-- header begin -->
@@ -283,7 +283,7 @@
                         <span id="menu-btn"></span>
                         <!-- small button close -->
 
-                        <span class="btn-rsvp">RSVP</span>
+                        <!-- <span class="btn-rsvp">RSVP</span> -->
 
                         <!-- mainmenu begin -->
                         <nav>
@@ -291,10 +291,10 @@
                                 <li><a href="index.html">Home</a>
                                 </li>
                                 <!-- <li><a href="01_story.html">Story</a></li> -->
-                                <li><a href="01_events.html">Events</a></li>
-                                <li><a href="01_people.html">People</a></li>
-                                <li><a href="01_gallery.html">Gallery</a></li>
-                                <li><a href="01_journal.html">Journal</a></li>
+                                <li><a href="#section-couple">People</a></li>
+                                <li><a href="#Events">Events</a></li>
+                                <li><a href="#section-gallery">Gallery</a></li>
+                                <li><a href="#familyMembers">Family Members</a></li>
                             </ul>
                         </nav>
 
@@ -310,79 +310,7 @@
         <div id="content" class="no-bottom no-top">
 
             <!-- rsvp popup begin -->
-            <div id="popup-box" class="full-height">
-                <span class="btn-close">
-                    <i class="icon_close"></i>
-                </span>
 
-                <div class="container center-y">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <h2 class="deco id-color"><span>We Invite You</span></h2>
-                            <h2 data-wow-delay=".2s">Thursday, 24 November 2022</h2>
-                        </div>
-
-                        <!-- <div class="spacer-double"></div> -->
-
-                        <div class="col-md-5 col-md-offset-1 text-right">
-                            <h3>Mandap Muhrat</h3>
-                            08:00 AM <br>Mrs.Rekhaben<br>
-                        </div>
-
-                        <div class="col-md-5">
-                            <h3>Wedding Reception</h3>
-                            14:00 PM - 16:00 PM<br> 100 Mainstreet Center, Sydney<br>
-                        </div>
-
-                        <!-- <div class="spacer-double"></div> -->
-
-                        <form name="rsvp" id='rsvp_form' class="form-underline" method="post"
-                            action="https://www.madebydesignesia.com/themes/ /rsvp.php">
-                            <div class="col-md-3">
-                                <input type='text' name='Name' id='name' class="form-control" placeholder="Your Name"
-                                    required maxlength="50">
-                            </div>
-                            <div class="col-md-3">
-                                <input type='text' name='Email' id='email' class="form-control" placeholder="Your Email"
-                                    required maxlength="50">
-                            </div>
-                            <div class="col-md-3">
-                                <select id="guest" name="Guest" size="1" class="form-control">
-                                    <option value="" disabled selected>Guests</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
-                            </div>
-                            <div class="col-md-3">
-                                <select id="attend" name="Attend" size="1" class="form-control">
-                                    <option value="" disabled selected>Are you attending?</option>
-                                    <option>yes</option>
-                                    <option>no</option>
-                                </select>
-                            </div>
-                            <div class="col-md-12 text-center">
-                                <div class="spacer-single"></div>
-                                <input type='submit' id='submit' value='Submit' class="btn btn-custom">
-                                <div id='mail_success' class='success'>Your message has been sent successfully.</div>
-                                <div id='mail_fail' class='error'>Sorry, error occured this time sending your message.
-                                </div>
-                            </div>
-                        </form>
-                        <div id="success_message">
-                            <h1>Thank You!</h1>
-                            <p> We will get back to you soon. </p>
-                        </div>
-                        <div id="error_message">
-                            <h1>Error</h1> Sorry there was an error sending your form.
-                        </div>
-
-                        <div class="spacer-single"></div>
-                    </div>
-                </div>
-            </div>
             <!-- rsvp popup close -->
 
             <!-- section begin -->
@@ -440,7 +368,7 @@
                             <div class="padding40">
                                 <h2>Rahul</h2>
 
-                                <p>Hipster, designer, ilustrator. Love music and adventure. "There is only one happiness
+                                <p>Love music and adventure. "There is only one happiness
                                     in
                                     this life, to love and be loved."</p>
                                 <!-- social icons -->
@@ -460,7 +388,7 @@
                                 data-wow-delay=".2s" />
                             <div class="padding40">
                                 <h2>Payal</h2>
-                                <p>Singer, writter, chef. Love music, reading and cooking. "Love isn't something you
+                                <p>Chef. Love music, reading and cooking. "Love isn't something you
                                     find. Love
                                     is something that finds you."</p>
 
@@ -528,7 +456,7 @@
             <!-- section close -->
 
             <!-- section begin -->
-            <section aria-label="section" class="no-bottom">
+            <section aria-label="section" id="Events" class="no-bottom">
 
                 <div class="row">
                     <div class="col-md-12 text-center">
@@ -551,9 +479,6 @@
                     </div>
                     <!-- </div> -->
                     <div class="row">
-                        <div class="col-md-12 text-center">
-                            <!-- <h2>Time left until event</h2> -->
-                        </div>
                         <div class="col-md-8 col-md-offset-2">
                             <!-- <div class="spacer-double"></div> -->
                             <div id="defaultCountdown" class="wow fadeIn"></div>
@@ -572,8 +497,6 @@
                         <div class="col-md-5  text-center wow fadeIn" data-wow-delay=".5s">
                             <h3>Mandap Muhrat</h3>
                             Thursday, 24 November 2022<br> 08 : 00 AM <br>Mrs.Rekhaben<br>
-                            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1806.6735661630382!2d72.82524597736678!3d21.222871587708244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e957b5b906d%3A0xa90bd3766c3ec11c!2sShyam%20Vadi!5e0!3m2!1sen!2sin!4v1666110416694!5m2!1sen!2sin"
-                                class="btn btn-custom mt30 popup-gmaps">View on map</a>
                         </div>
                     </div>
 
@@ -586,8 +509,6 @@
                         <div class="col-md-5  text-center wow fadeIn" data-wow-delay=".5s">
                             <h3>Raas Garba </h3>
                             Thursday, 24 November 2022<br> 08 : 30 PM <br> Mrs.Hansaben<br>
-                            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1806.6735661630382!2d72.82524597736678!3d21.222871587708244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e957b5b906d%3A0xa90bd3766c3ec11c!2sShyam%20Vadi!5e0!3m2!1sen!2sin!4v1666110416694!5m2!1sen!2sin"
-                                class="btn btn-custom mt30 popup-gmaps">View on map</a>
                         </div>
 
                     </div>
@@ -620,8 +541,6 @@
                         <div class="col-md-5  text-center wow fadeIn" data-wow-delay=".5s">
                             <h3> Jaan Prasthan </h3>
                             Friday, 25 November 2022<br> 10 : 05 AM <br> Mrs.Narmadaben<br>
-                            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1806.6735661630382!2d72.82524597736678!3d21.222871587708244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e957b5b906d%3A0xa90bd3766c3ec11c!2sShyam%20Vadi!5e0!3m2!1sen!2sin!4v1666110416694!5m2!1sen!2sin"
-                                class="btn btn-custom mt30 popup-gmaps">View on map</a>
                         </div>
 
                     </div>
@@ -633,10 +552,8 @@
                             <h3> Banquet </h3>
                             Friday, 25 November 2022<br> 11 : 35 AM <br>Shyam Vadi Bhakti Nagar Society, Katargam, Surat
                             <br>
-                            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1806.6735661630382!2d72.82524597736678!3d21.222871587708244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e957b5b906d%3A0xa90bd3766c3ec11c!2sShyam%20Vadi!5e0!3m2!1sen!2sin!4v1666110416694!5m2!1sen!2sin"
-                                class="btn btn-custom mt30 popup-gmaps">View on map</a>
                         </div>
-
+                        
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-md-offset-1">
@@ -645,10 +562,12 @@
                         <div class="col-md-5  text-center wow fadeIn" data-wow-delay=".5s">
                             <h3>Hasta Milap</h3>
                             Friday, 25 November 2022<br> 12 : 30 PM <br>Mrs.Priyaben<br>
-                            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1806.6735661630382!2d72.82524597736678!3d21.222871587708244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e957b5b906d%3A0xa90bd3766c3ec11c!2sShyam%20Vadi!5e0!3m2!1sen!2sin!4v1666110416694!5m2!1sen!2sin"
-                                class="btn btn-custom mt30 popup-gmaps">View on map</a>
+                            <iframe class="pt30"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.2455267152186!2d72.82339991462634!3d21.222110285893955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e957b5b906d%3A0xa90bd3766c3ec11c!2sShyam%20Vadi!5e0!3m2!1sen!2sin!4v1666285743397!5m2!1sen!2sin"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
-
+                        
                     </div>
                 </div>
             </section>
@@ -657,7 +576,7 @@
 
             <!-- section begin -->
             <div id="" class="text-light" data-stellar-background-ratio=".2">
-                <div class="container relative">
+                <div class="container relative"  id="familyMembers">
                     <div class="row" style="background-size: cover;">
                         <div class="col-md-12 text-center">
                             <h2 style="    color: black !important;    font-weight: bold;">Blessings By</h2>
@@ -672,7 +591,8 @@
                             <h2 style="    color: black !important;    font-weight: bold;">Affectionate By</h2>
                             <!-- <div class="spacer-single"></div> -->
                         </div>
-                        <p class="col-md-6 item text-center" style="text-transform: capitalize; color: black !important;  ;">
+                        <p class="col-md-6 item text-center"
+                            style="text-transform: capitalize; color: black !important;  ;">
                             bhimjibhai dayabhai parmar<br>
                             madhubhai dayabhai parmar<br>
                             dineshbhai dayabhai parmar<br>
@@ -688,7 +608,8 @@
                             <h2 style="    color: black !important;    font-weight: bold;">Aspirant Of Arrival</h2>
                             <!-- <div class="spacer-single"></div> -->
                         </div>
-                        <p class="col-md-6 item text-center" style="text-transform: capitalize; color: black !important;  ;">
+                        <p class="col-md-6 item text-center"
+                            style="text-transform: capitalize; color: black !important;  ;">
                             chiragbhai hareshbhai parmar<br>
                             kaushik hareshbhai parmar<br>
                             hiren rajeshbhai parmar<br>
@@ -697,7 +618,7 @@
                             vaibhav chandubhai parmar<br>
                             darshan mukeshbhai parmar<br>
                             marmik vipulbhai parmar<br>
-                            dharm  hareshbhai parmar<br>
+                            dharm hareshbhai parmar<br>
                             <br>
                         </p>
                     </div>
@@ -921,14 +842,14 @@
 
 </body>
 <script>
-    window.scrollTo(0, 0);
     $(document).ready(function () {
         $(".grid-item").click(function () {
-
+            window.scrollTo(0, 0);
             $(this).children('.door').toggleClass("active");
             $('html').css('overflow', 'auto')
-            $('#wrapper').css('display', 'block')
             var elem = document.documentElement
+            var x = document.getElementById("myAudio");
+            x.play();
             elem.requestFullscreen()
             setTimeout(() => {
                 $(this).css('display', 'none');

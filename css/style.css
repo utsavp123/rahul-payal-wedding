@@ -569,7 +569,7 @@ header.de_header_2.smaller .info {
 	padding: 6px;
 	text-align: center;
 	cursor: pointer;
-	margin-right: 60px;
+	/* margin-right: 60px; */
 	z-index: 100;
 }
 #menu-btn:before {
