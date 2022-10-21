@@ -581,9 +581,9 @@
                             <!-- <div class="spacer-single"></div> -->
                         </div>
                         <p class=" item text-center" style="color: black !important;  ;">
-                            Late Mr. Nathabhai Ambabhai Parmar<br>
-                            Late Mr. Dayabhai Nathabhai Parmar<br>
-                            Late Mr. Dholiben Dayabhai Parmar<br>
+                            Late Nathabhai Ambabhai Parmar<br>
+                            Late Dayabhai Nathabhai Parmar<br>
+                            Late Dholiben Dayabhai Parmar<br>
                         </p>
                         <div class="col-md-12 text-center">
                             <h2 style="    color: black !important;    font-weight: bold;">Affectionate By</h2>
@@ -843,16 +843,15 @@
     $(document).ready(function () {
         $(".grid-item").click(function () {
             window.scrollTo(0, 0);
-            // var item = setInterval(() => {
+            var item = setInterval(() => {
             document.querySelector(".grid-item").style.visibility = 'hidden';
             document.querySelector(".grid-item").style.height = '0vh';
             document.getElementById("heading").style.visibility = 'hidden';
             document.getElementById("heading").style.height = '0vh';
             document.getElementById("door5").style.height = '0vh';
             document.getElementById("door5").style.visibility = 'hidden';
-
-            // clearInterval(item);
-            // }, 1000);
+            clearInterval(item);
+            }, 1000);
             $(this).children('.door').toggleClass("active");
             $('html').css('overflow', 'auto')
             var elem = document.documentElement
