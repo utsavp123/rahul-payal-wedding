@@ -29,9 +29,9 @@
     <link rel="stylesheet" href="css/animsition.min.css" type="text/css">
     <link rel="stylesheet" href="rsvp/form.css">
     <style>
-        /* html {
-            overflow: hidden;
-        } */
+        html {
+            overflow-x: hidden !important;
+        }
 
         #door5 {
             overflow: unset;
@@ -590,33 +590,33 @@
                             <!-- <div class="spacer-single"></div> -->
                         </div>
                         <p class=" item text-center" style="text-transform: capitalize; color: black !important;  ;">
-                           mr. bhimjibhai dayabhai parmar<br>
-                           mr. madhubhai dayabhai parmar<br>
-                           mr. dineshbhai dayabhai parmar<br>
-                           mr. hareshbhai bhimjibhai parmar<br>
-                           mr. rajeshbhai bhimjibhai parmar<br>
-                           mr. chandubhai bhimjibhai parmar<br>
-                           mr. mukeshbhai bhimjibhai parmar<br>
-                           mr. vipulbhai madhubhai parmar<br>
-                           mr. alpeshbhai madhubhai parmar<br>
-                           mr. harshadbhai dineshbhai parmar<br>
+                            mr. bhimjibhai dayabhai parmar<br>
+                            mr. madhubhai dayabhai parmar<br>
+                            mr. dineshbhai dayabhai parmar<br>
+                            mr. hareshbhai bhimjibhai parmar<br>
+                            mr. rajeshbhai bhimjibhai parmar<br>
+                            mr. chandubhai bhimjibhai parmar<br>
+                            mr. mukeshbhai bhimjibhai parmar<br>
+                            mr. vipulbhai madhubhai parmar<br>
+                            mr. alpeshbhai madhubhai parmar<br>
+                            mr. harshadbhai dineshbhai parmar<br>
                         </p>
                         <div class="col-md-12 text-center">
                             <h2 style="    color: black !important;    font-weight: bold;">Aspirant Of Arrival</h2>
                             <!-- <div class="spacer-single"></div> -->
                         </div>
                         <p class=" item text-center" style="text-transform: capitalize; color: black !important;  ;">
-                           mr. chiragbhai hareshbhai parmar<br>
-                           mr. kaushik hareshbhai parmar<br>
-                           mr. hiren rajeshbhai parmar<br>
-                           mr. utsav rajeshbhai parmar<br>
-                           mr. yagnik chandubhai parmar<br>
-                           mr. vaibhav chandubhai parmar<br>
-                           mr. darshan mukeshbhai parmar<br>
-                           mr. marmik vipulbhai parmar<br>
-                           mr. dherya alpeshbhai parmar<br>
-                           mr. dharm harshadbhai parmar<br>
-                           mr. rishiv chiragbhai parmar<br>
+                            mr. chiragbhai hareshbhai parmar<br>
+                            mr. kaushik hareshbhai parmar<br>
+                            mr. hiren rajeshbhai parmar<br>
+                            mr. utsav rajeshbhai parmar<br>
+                            mr. yagnik chandubhai parmar<br>
+                            mr. vaibhav chandubhai parmar<br>
+                            mr. darshan mukeshbhai parmar<br>
+                            mr. marmik vipulbhai parmar<br>
+                            mr. dherya alpeshbhai parmar<br>
+                            mr. dharm harshadbhai parmar<br>
+                            mr. rishiv chiragbhai parmar<br>
                             <br>
                         </p>
                     </div>
@@ -843,25 +843,23 @@
     $(document).ready(function () {
         $(".grid-item").click(function () {
             window.scrollTo(0, 0);
+            // var item = setInterval(() => {
+            document.querySelector(".grid-item").style.visibility = 'hidden';
+            document.querySelector(".grid-item").style.height = '0vh';
+            document.getElementById("heading").style.visibility = 'hidden';
+            document.getElementById("heading").style.height = '0vh';
+            document.getElementById("door5").style.height = '0vh';
+            document.getElementById("door5").style.visibility = 'hidden';
+
+            // clearInterval(item);
+            // }, 1000);
             $(this).children('.door').toggleClass("active");
             $('html').css('overflow', 'auto')
             var elem = document.documentElement
             var x = document.getElementById("myAudio");
             x.play();
+
             elem.requestFullscreen()
-
-            // var item = setInterval(() => {
-                document.querySelector(".grid-item").style.visibility = 'hidden';
-                document.querySelector(".grid-item").style.height = '0vh';
-                document.getElementById("heading").style.visibility = 'hidden';
-                document.getElementById("heading").style.height = '0vh';
-                document.getElementById("door5").style.height = '0vh';
-                document.getElementById("door5").style.visibility = 'hidden';
-                
-                clearInterval(item);
-            // }, 1000);
-
-
         });
     });
 </script>
