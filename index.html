@@ -238,14 +238,12 @@
 
 <body id="homepage">
     <div class="grid-item">
-        <div>
-            <div class="heading">
-                <h2 class=" " style="color:#fffa9a">
-                    Welcome To Wedding Ceremony.....
-                </h2>
-                <div style="display: block; color:rgb(206 192 94)">
-                    Click To Open The Door
-                </div>
+        <div class="heading" id="heading">
+            <h2 class=" " style="color:#fffa9a">
+                Welcome To Wedding Ceremony.....
+            </h2>
+            <div style="display: block; color:rgb(206 192 94)">
+                Click To Open The Door
             </div>
         </div>
         <div class="door" id="door5">
@@ -583,41 +581,42 @@
                             <!-- <div class="spacer-single"></div> -->
                         </div>
                         <p class=" item text-center" style="color: black !important;  ;">
-                            Nathabhai Ambabhai Parmar<br>
-                            Dayabhai Nathabhai Parmar<br>
-                            Dholiben Dayabhai Parmar<br>
+                            Late Mr. Nathabhai Ambabhai Parmar<br>
+                            Late Mr. Dayabhai Nathabhai Parmar<br>
+                            Late Mr. Dholiben Dayabhai Parmar<br>
                         </p>
                         <div class="col-md-12 text-center">
                             <h2 style="    color: black !important;    font-weight: bold;">Affectionate By</h2>
                             <!-- <div class="spacer-single"></div> -->
                         </div>
                         <p class=" item text-center" style="text-transform: capitalize; color: black !important;  ;">
-                            bhimjibhai dayabhai parmar<br>
-                            madhubhai dayabhai parmar<br>
-                            dineshbhai dayabhai parmar<br>
-                            hareshbhai bhimjibhai parmar<br>
-                            rajeshbhai bhimjibhai parmar<br>
-                            chandubhai bhimjibhai parmar<br>
-                            mukeshbhai bhimjibhai parmar<br>
-                            vipulbhai madhubhai parmar<br>
-                            alpeshbhai madhubhai parmar<br>
-                            harshadbhai dineshbhai parmar<br>
+                           mr. bhimjibhai dayabhai parmar<br>
+                           mr. madhubhai dayabhai parmar<br>
+                           mr. dineshbhai dayabhai parmar<br>
+                           mr. hareshbhai bhimjibhai parmar<br>
+                           mr. rajeshbhai bhimjibhai parmar<br>
+                           mr. chandubhai bhimjibhai parmar<br>
+                           mr. mukeshbhai bhimjibhai parmar<br>
+                           mr. vipulbhai madhubhai parmar<br>
+                           mr. alpeshbhai madhubhai parmar<br>
+                           mr. harshadbhai dineshbhai parmar<br>
                         </p>
                         <div class="col-md-12 text-center">
                             <h2 style="    color: black !important;    font-weight: bold;">Aspirant Of Arrival</h2>
                             <!-- <div class="spacer-single"></div> -->
                         </div>
                         <p class=" item text-center" style="text-transform: capitalize; color: black !important;  ;">
-                            chiragbhai hareshbhai parmar<br>
-                            kaushik hareshbhai parmar<br>
-                            hiren rajeshbhai parmar<br>
-                            utsav rajeshbhai parmar<br>
-                            yagnik chandubhai parmar<br>
-                            vaibhav chandubhai parmar<br>
-                            darshan mukeshbhai parmar<br>
-                            marmik vipulbhai parmar<br>
-                            dharm hareshbhai parmar<br>
-                            rishiv chiragbhai parmar<br>
+                           mr. chiragbhai hareshbhai parmar<br>
+                           mr. kaushik hareshbhai parmar<br>
+                           mr. hiren rajeshbhai parmar<br>
+                           mr. utsav rajeshbhai parmar<br>
+                           mr. yagnik chandubhai parmar<br>
+                           mr. vaibhav chandubhai parmar<br>
+                           mr. darshan mukeshbhai parmar<br>
+                           mr. marmik vipulbhai parmar<br>
+                           mr. dherya alpeshbhai parmar<br>
+                           mr. dharm harshadbhai parmar<br>
+                           mr. rishiv chiragbhai parmar<br>
                             <br>
                         </p>
                     </div>
@@ -850,13 +849,16 @@
             var x = document.getElementById("myAudio");
             x.play();
             elem.requestFullscreen()
-            var item = setInterval(() => {
-
-            
-                $(this).css( 'visibility', 'hidden'  );
-                $(this).css( 'height', '0vh');
+            // var item = setInterval(() => {
+                document.querySelector(".grid-item").style.visibility = 'hidden';
+                document.querySelector(".grid-item").style.height = '0vh';
+                document.getElementById("heading").style.visibility = 'hidden';
+                document.getElementById("heading").style.height = '0vh';
+                document.getElementById("door5").style.height = '0vh';
+                document.getElementById("door5").style.visibility = 'hidden';
+                
                 clearInterval(item);
-            }, 1000);
+            // }, 1000);
 
         });
     });
