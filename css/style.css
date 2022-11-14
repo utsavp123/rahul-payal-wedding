@@ -6523,9 +6523,9 @@ a, img {
 
 @media only screen and (max-width: 767px) {
 	#custom-owl-slider .item img{
-		width:200% !important;
+		width:120% !important;
 		height:auto !important;
-		margin-left:-60%;
+		margin-left:-15%;
 	}
 	#custom-owl-slider .item{
 		overflow:hidden;
